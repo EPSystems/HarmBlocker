@@ -717,6 +717,26 @@ footer {
   letter-spacing: 0.005em;
 }
 
+.price-note {
+  margin-top: var(--space-4);
+  font-size: 0.8125rem;
+  color: var(--ink-muted);
+  text-align: center;
+  letter-spacing: 0.005em;
+}
+
+.price-note a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--amber-soft);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.price-note a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--amber);
+}
+
 /* ---------- Footer ---------- */
 .footer {
   border-top: 1px solid var(--hairline);
