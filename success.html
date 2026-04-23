@@ -183,11 +183,24 @@
     <!-- ============ FOOTER ============ -->
     <footer class="footer">
       <div class="container footer__inner">
-        <div>© <span id="year">2026</span> HarmBlocker — По-тих интернет за всеки.</div>
+        <div class="footer__brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.25">
+              <circle cx="14" cy="14" r="12.5" />
+              <circle cx="14" cy="14" r="8.5" />
+              <circle cx="14" cy="14" r="3" fill="currentColor" stroke="none" />
+            </svg>
+          </span>
+          <div class="footer__entity">
+            <div class="footer__entity-name">__ENTITY_NAME__</div>
+            <div class="footer__entity-meta">__ENTITY_ADDRESS__ · <a href="mailto:__CONTACT_EMAIL__">__CONTACT_EMAIL__</a></div>
+          </div>
+        </div>
         <nav class="footer__links" aria-label="Долен колонтитул">
-          <a href="#">Поверителност</a>
-          <a href="#">Поддръжка</a>
+          <a href="/privacy">Поверителност</a>
+          <a href="/terms">Условия</a>
         </nav>
+        <div class="footer__copy">© <span id="year">2026</span> __ENTITY_NAME__ · По-тих интернет за всеки.</div>
       </div>
     </footer>
 
