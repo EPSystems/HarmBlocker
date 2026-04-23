@@ -109,6 +109,8 @@ device DNS per the guide. No account, no provisioning, no fulfillment.
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
+| Hosting: Vercel | User-provisioned; auto-deploy from main; zero-config for static sites | — Pending |
+| Domain: Hostinger | User-provisioned; DNS points at Vercel via CNAME/A records | — Pending |
 | Marketing site stays static HTML/CSS/JS | Matches team size, keeps hosting trivial, no surface area to maintain | — Pending |
 | Stripe-only checkout for v1 (cards in EUR) | Fastest path to taking money; BG card acceptance is adequate for validation | — Pending |
 | Local BG payment methods (Borica/EasyPay) deferred to post-launch | One provider at a time; add when volume justifies complexity | — Pending |
@@ -118,6 +120,52 @@ device DNS per the guide. No account, no provisioning, no fulfillment.
 | 14-day right-of-withdrawal: full disclosure + ToS clause | EU distance-selling law; also reinforces brand trust to be explicit about it | — Pending |
 | Blocker tech treated as separate product | This repo stays scoped; avoids coupling marketing cadence to product-engineering cadence | — Pending |
 | Bulgarian-only copy for v1 | Market focus; i18n would dilute without upside | — Pending |
+
+## Milestone Execution Directive (v1.0 Launch-Ready)
+
+**Placeholder strategy for third-party integrations.** This milestone is being
+executed autonomously on a timeline that doesn't block on external vendor
+onboarding. Where a requirement depends on credentials, IDs, or booking links
+the user will provision later, **use clearly-marked placeholders rather than
+blocking the phase**. The user will swap them for real values before launch.
+
+Specifically:
+
+- **Stripe checkout URLs** — replace the hero and pricing CTA `href` values with
+  `__STRIPE_CHECKOUT_URL__` (or an env-var reference) plus a code comment
+  noting how to swap in the real Stripe Checkout session URL. Write the
+  redirect/cancel wiring assuming the real URL is set; do not create a Stripe
+  account.
+- **Cal.com booking link** — embed against a placeholder URL
+  (`__CALCOM_BOOKING_URL__`) with a visible code comment. Use an `<iframe>` or
+  the official Cal.com embed snippet with the URL factored out.
+- **Privacy-first analytics site ID** — install the chosen vendor's script tag
+  with a placeholder `data-domain` / site-ID value (`__ANALYTICS_SITE_ID__`)
+  and a comment noting exactly what to replace.
+- **Legal pages (Privacy Policy, Terms of Service)** — draft full Bulgarian
+  templates that are technically correct (GDPR, 14-day withdrawal clause,
+  entity placeholders). Prefix each legal page with a prominent
+  `<!-- LAWYER REVIEW REQUIRED BEFORE LAUNCH -->` HTML comment and a visible
+  in-page note stating the text must be reviewed by a Bulgarian lawyer before
+  going live. Use `__ENTITY_NAME__`, `__ENTITY_ADDRESS__`, `__CONTACT_EMAIL__`
+  as entity placeholders.
+- **Domain in metadata / sitemap / OG tags** — use `harmblocker.bg` as the
+  canonical domain pending confirmation of the exact Hostinger registration.
+
+**Deliverables the autonomous run should produce:**
+
+- A `vercel.json` in repo root if Vercel's zero-config defaults are insufficient
+  (security headers, redirects, clean-URLs). Keep it minimal.
+- All phase work committed with real code where possible, placeholders where
+  not, and no "skip this" decisions.
+
+**Out of scope for this run:**
+
+- Creating accounts with any vendor (Stripe, Cal.com, Plausible, Vercel,
+  Hostinger) — all user-owned.
+- Writing DNS records or touching hosting dashboards — user action.
+- Claiming legal text is lawyer-reviewed — it is not; the warning comments
+  make this explicit.
 
 ## Evolution
 
