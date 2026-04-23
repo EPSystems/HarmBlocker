@@ -197,6 +197,38 @@
           </div>
         </div>
       </section>
+
+      <!-- ============ SUPPORT (Cal.com booking) ============ -->
+      <section class="section section--tight section--support">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow eyebrow--centered">Подкрепа</span>
+            <h2 class="h2">Ако ви <span class="serif-italic">трябва помощ.</span></h2>
+            <p class="lead">
+              Запазете си кратък разговор. Сядаме заедно на настройката —
+              без бързане, без технически език.
+            </p>
+          </div>
+
+          <!-- SWAP: replace __CALCOM_BOOKING_URL__ with your Cal.com booking link
+               (e.g. "harmblocker/support-call"). Create a free account + event type at
+               https://cal.com/ to get the slug. The iframe then loads
+               https://cal.com/<your-slug>?embed=true — no JS hydration, no trackers. -->
+          <div class="calcom-frame reveal">
+            <iframe
+              src="https://cal.com/__CALCOM_BOOKING_URL__?embed=true"
+              loading="lazy"
+              title="Резервирайте разговор"
+              allow="fullscreen"
+            ></iframe>
+          </div>
+
+          <p class="price-note">
+            14-дневно право на отказ от датата на покупката.
+            <a href="/terms#отказ">Пълни условия</a>.
+          </p>
+        </div>
+      </section>
     </main>
 
     <!-- ============ FOOTER ============ -->
