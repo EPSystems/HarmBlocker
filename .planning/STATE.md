@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed 02-legal-floor-01-PLAN.md
-last_updated: "2026-04-23T19:31:06.113Z"
+stopped_at: Completed 03-copy-lock-01-PLAN.md
+last_updated: "2026-04-23T19:38:51.466Z"
 last_activity: 2026-04-23
 progress:
   total_phases: 7
-  completed_phases: 2
-  total_plans: 2
-  completed_plans: 2
+  completed_phases: 3
+  total_plans: 3
+  completed_plans: 3
   percent: 100
 ---
 
@@ -21,7 +21,7 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-23)
 
 **Core value:** A Bulgarian customer can land on the site, understand the product in under 30 seconds, pay with a card, and reach a setup flow that actually gets the blocker running — without ever feeling shamed, judged, or marketed-at.
-**Current focus:** Phase 02 — legal-floor
+**Current focus:** Phase 03 — copy-lock (complete); next Phase 04 — checkout-live
 
 ## Current Position
 
@@ -54,6 +54,7 @@ Progress: [██████████] 100%
 *Updated after each plan completion*
 | Phase 01-production-floor P01 | 2min | 3 tasks | 2 files |
 | Phase 02-legal-floor P01 | 4min | 4 tasks | 6 files |
+| Phase 03-copy-lock P01 | 3m 8s | 5 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -72,6 +73,10 @@ Decisions are logged in PROJECT.md Key Decisions table. Recent decisions affecti
 - [Phase 02-legal-floor]: Entity placeholders use grep-able __ENTITY_NAME__ / __ENTITY_ADDRESS__ / __CONTACT_EMAIL__ tokens across all 4 pages and both legal drafts; user-swap before launch
 - [Phase 02-legal-floor]: Legal drafts marked two ways — HTML comment (developer-visible) and visible .legal-banner in Bulgarian (reader-visible); both must be removed after lawyer sign-off
 - [Phase 02-legal-floor]: 14-day right-of-withdrawal clause in terms.html cites both ЗЗП чл. 50–57 and Directive 2011/83/ЕС and includes a copyable blockquote cancellation template; heading is stable anchor text for Phase 4 LEG-04 pre-purchase disclosure
+- [Phase 03-copy-lock]: Canonical domain fixed to harmblocker.bg across all meta, canonical links, sitemap, and support email
+- [Phase 03-copy-lock]: OG image referenced at /og-image.svg but asset itself deferred to later polish pass (documented inline in HTML comment)
+- [Phase 03-copy-lock]: success.html pivots from vague 'поставете настройките за защита' to concrete 'въведете двата DNS адреса от имейла' — router-first as the тих default
+- [Phase 03-copy-lock]: how-it-works step I rewritten from 'Регистрирайте се' to 'Платете с карта' — v1 has no account; Stripe manages subscription state
 
 ### Pending Todos
 
@@ -88,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-23T19:28:07.264Z
-Stopped at: Completed 02-legal-floor-01-PLAN.md
+Last session: 2026-04-23T19:38:41.942Z
+Stopped at: Completed 03-copy-lock-01-PLAN.md
 Resume file: None

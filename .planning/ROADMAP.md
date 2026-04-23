@@ -28,7 +28,7 @@ after Phase 4. Phase 7 runs last.
 
 - [ ] **Phase 1: Production floor** - Domain, static host, and HTTPS so the site has a real home
 - [x] **Phase 2: Legal floor** - Privacy Policy, Terms of Service with 14-day withdrawal clause, footer entity details, cookie-banner decision
-- [ ] **Phase 3: Copy lock** - Editorial pass on `index.html`, real copy on `success.html`, SEO baseline metadata
+- [x] **Phase 3: Copy lock** - Editorial pass on `index.html`, real copy on `success.html`, SEO baseline metadata
 - [ ] **Phase 4: Checkout live** - Stripe subscription wired to both CTAs, pre-purchase 14-day disclosure surfaced near pricing
 - [ ] **Phase 5: Post-purchase handoff** - Cal.com booking embed and 14-day withdrawal notice on `success.html`
 - [ ] **Phase 6: Measurement** - Privacy-first cookieless analytics tracking pageviews and CTA clicks
@@ -70,7 +70,8 @@ after Phase 4. Phase 7 runs last.
   2. `success.html` step-by-step setup copy reflects the real DIY delivery model the customer actually follows, not demo placeholder text
   3. Each page has a meaningful `<title>`, meta description, OpenGraph/Twitter-card tags, and a favicon served from the root
   4. `robots.txt` and `sitemap.xml` are reachable at the domain root and list the canonical URLs of `index.html` and `success.html`
-**Plans**: TBD
+**Plans**: 1 plan
+- [x] 03-copy-lock-01-PLAN.md — editorial copy pass on index.html + real DIY flow on success.html + SEO baseline (meta, OG, canonical, favicon.svg, robots.txt, sitemap.xml)
 **UI hint**: yes
 
 ### Phase 4: Checkout live
@@ -126,7 +127,7 @@ Phases 1 and 2 may execute in parallel. Phases 5 and 6 may execute in parallel a
 |-------|----------------|--------|-----------|
 | 1. Production floor | 1/1 | Complete | 2026-04-23 |
 | 2. Legal floor | 1/1 | Complete | 2026-04-23 |
-| 3. Copy lock | 0/TBD | Not started | - |
+| 3. Copy lock | 1/1 | Complete | 2026-04-23 |
 | 4. Checkout live | 0/TBD | Not started | - |
 | 5. Post-purchase handoff | 0/TBD | Not started | - |
 | 6. Measurement | 0/TBD | Not started | - |

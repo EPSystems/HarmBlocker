@@ -26,7 +26,7 @@ Requirements for the **Launch-Ready** milestone. Each maps to roadmap phases.
 ### Post-Purchase Flow
 
 - [ ] **POST-01**: `success.html` embeds a Cal.com / Calendly booking widget so customers can request a support meeting
-- [ ] **POST-02**: `success.html` copy is rewritten to reflect the real DIY delivery model (current copy is placeholder-flavored)
+- [x] **POST-02**: `success.html` copy is rewritten to reflect the real DIY delivery model (current copy is placeholder-flavored)
 - [ ] **POST-03**: `success.html` includes a visible 14-day withdrawal notice (per LEG-04)
 
 ### Analytics
@@ -38,8 +38,8 @@ Requirements for the **Launch-Ready** milestone. Each maps to roadmap phases.
 
 - [x] **INFR-01**: Production domain is registered and pointed at the static host
 - [x] **INFR-02**: Production hosting is set up (Cloudflare Pages / Netlify / Vercel — decision during phase), auto-deploying from the main branch
-- [ ] **INFR-03**: SEO baseline ships: meaningful `<title>` and meta description per page, OpenGraph/Twitter-card tags, favicon, `robots.txt`, `sitemap.xml`
-- [ ] **INFR-04**: A copy audit of `index.html` is done — any placeholder or first-draft language is rewritten in the "Quiet Confidence" brand voice before real money changes hands
+- [x] **INFR-03**: SEO baseline ships: meaningful `<title>` and meta description per page, OpenGraph/Twitter-card tags, favicon, `robots.txt`, `sitemap.xml`
+- [x] **INFR-04**: A copy audit of `index.html` is done — any placeholder or first-draft language is rewritten in the "Quiet Confidence" brand voice before real money changes hands
 - [x] **INFR-05**: HTTPS is enforced on production (HSTS header, no mixed content)
 
 ### Retrospective Audit
@@ -104,14 +104,14 @@ Explicitly excluded. Documented to prevent scope creep.
 | LEG-05 | Phase 2 — Legal floor | Complete |
 | LEG-06 | Phase 2 — Legal floor | Complete |
 | POST-01 | Phase 5 — Post-purchase handoff | Pending |
-| POST-02 | Phase 3 — Copy lock | Pending |
+| POST-02 | Phase 3 — Copy lock | Complete |
 | POST-03 | Phase 5 — Post-purchase handoff | Pending |
 | ANLY-01 | Phase 6 — Measurement | Pending |
 | ANLY-02 | Phase 6 — Measurement | Pending |
 | INFR-01 | Phase 1 — Production floor | Complete |
 | INFR-02 | Phase 1 — Production floor | Complete |
-| INFR-03 | Phase 3 — Copy lock | Pending |
-| INFR-04 | Phase 3 — Copy lock | Pending |
+| INFR-03 | Phase 3 — Copy lock | Complete |
+| INFR-04 | Phase 3 — Copy lock | Complete |
 | INFR-05 | Phase 1 — Production floor | Complete |
 | AUDT-01 | Phase 7 — Pre-launch audit | Pending |
 
