@@ -81,8 +81,12 @@
               </p>
 
               <div class="hero__cta">
+                <!-- SWAP: replace __STRIPE_CHECKOUT_URL__ with your live Stripe Checkout URL.
+                     Configure success URL → https://harmblocker.bg/success?session_id={CHECKOUT_SESSION_ID}
+                     Configure cancel URL  → https://harmblocker.bg/#pricing
+                     Product: 3€/mo EUR recurring subscription -->
                 <a
-                  href="success.html"
+                  href="__STRIPE_CHECKOUT_URL__"
                   class="btn btn--primary btn--large"
                   data-cta="hero"
                 >
@@ -333,8 +337,12 @@
                 </li>
               </ul>
 
+              <!-- SWAP: replace __STRIPE_CHECKOUT_URL__ with your live Stripe Checkout URL.
+                   Configure success URL → https://harmblocker.bg/success?session_id={CHECKOUT_SESSION_ID}
+                   Configure cancel URL  → https://harmblocker.bg/#pricing
+                   Product: 3€/mo EUR recurring subscription -->
               <a
-                href="success.html"
+                href="__STRIPE_CHECKOUT_URL__"
                 class="btn btn--primary btn--large"
                 data-cta="pricing"
               >
