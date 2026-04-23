@@ -992,6 +992,26 @@ footer {
   color: var(--ink);
 }
 
+/* Cal.com booking frame — hairline panel, paper-soft surface while widget loads */
+.calcom-frame {
+  width: 100%;
+  max-width: 760px;
+  margin: var(--space-7) auto 0;
+  min-height: 640px;
+  background: var(--paper-soft);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.calcom-frame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 640px;
+  border: 0;
+  display: block;
+}
+
 /* ---------- Reveal animations ---------- */
 .reveal {
   opacity: 0;
