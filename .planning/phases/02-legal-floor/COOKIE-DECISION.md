@@ -33,3 +33,27 @@ Revisiting means: either remove the trigger, or ship a GDPR-compliant consent ba
 - `privacy.html` — Section "Бисквитки (cookies)" aligns with this decision and states plainly that the site sets no cookies.
 - Phase 6 plan (not yet written) — must confirm the chosen analytics tool is cookieless before installation; if not, this decision is invalidated and a banner must ship with the analytics script.
 - `.planning/STATE.md` — Decisions section records this alignment.
+
+---
+
+## Phase 6 Outcome
+
+**Date:** 2026-04-23
+**Vendor chosen:** Plausible (`https://plausible.io/js/script.tagged-events.js`)
+**Site ID placeholder:** `__ANALYTICS_SITE_ID__` — replace with your Plausible site ID
+  (e.g., `harmblocker.bg`) after creating an account at https://plausible.io.
+
+### Confirmation
+
+Plausible is **cookieless** and **GDPR-friendly**. It does not set cookies, does
+not use persistent client-side identifiers, and stores no personal data in the
+browser. The Phase 2 decision (no cookie banner required) remains valid.
+
+**What was installed:**
+- `script.tagged-events.js` — the Plausible variant that auto-fires custom events
+  on elements carrying `class="plausible-event-name=..."` classes.
+- Both `index.html` and `success.html` carry the Plausible script in `<head>`.
+- Two CTA elements in `index.html` carry `plausible-event-name=CTA+Click` with
+  position properties (`hero` and `pricing`) for distinct event segmentation.
+
+**No cookie banner is triggered by this installation.** ANLY-02 satisfied.
