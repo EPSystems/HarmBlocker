@@ -31,7 +31,7 @@ after Phase 4. Phase 7 runs last.
 - [x] **Phase 3: Copy lock** - Editorial pass on `index.html`, real copy on `success.html`, SEO baseline metadata
 - [ ] **Phase 4: Checkout live** - Stripe subscription wired to both CTAs, pre-purchase 14-day disclosure surfaced near pricing
 - [x] **Phase 5: Post-purchase handoff** - Cal.com booking embed and 14-day withdrawal notice on `success.html`
-- [ ] **Phase 6: Measurement** - Privacy-first cookieless analytics tracking pageviews and CTA clicks
+- [x] **Phase 6: Measurement** - Privacy-first cookieless analytics tracking pageviews and CTA clicks
 - [ ] **Phase 7: Pre-launch audit** - Retroactive `/gsd:ui-review` of shipped landing and success pages, any fixes applied
 
 ## Phase Details
@@ -106,7 +106,8 @@ after Phase 4. Phase 7 runs last.
   1. One of Plausible / Umami / Fathom is installed on `index.html` and `success.html` and is reporting pageviews in its dashboard
   2. Clicking either `data-cta="hero"` or `data-cta="pricing"` on `index.html` is recorded as a distinct event in the analytics dashboard
   3. The analytics install does not set cookies or any persistent identifier that would require a consent banner under GDPR, and the Phase 2 cookie-banner decision remains valid
-**Plans**: TBD
+**Plans**: 1 plan
+- [x] 06-measurement-01-PLAN.md — Plausible analytics on index.html + success.html + CTA event classes + COOKIE-DECISION.md Phase 6 note
 
 ### Phase 7: Pre-launch audit
 **Goal**: A retroactive `/gsd:ui-review` has been run against the shipped landing and success pages, and any pre-launch fixes it surfaces have been applied
@@ -131,7 +132,7 @@ Phases 1 and 2 may execute in parallel. Phases 5 and 6 may execute in parallel a
 | 3. Copy lock | 1/1 | Complete | 2026-04-23 |
 | 4. Checkout live | 1/1 | Complete | 2026-04-23 |
 | 5. Post-purchase handoff | 1/1 | Complete | 2026-04-23 |
-| 6. Measurement | 0/TBD | Not started | - |
+| 6. Measurement | 1/1 | Complete | 2026-04-23 |
 | 7. Pre-launch audit | 0/TBD | Not started | - |
 
 ---

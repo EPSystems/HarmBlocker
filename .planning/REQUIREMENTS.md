@@ -31,8 +31,8 @@ Requirements for the **Launch-Ready** milestone. Each maps to roadmap phases.
 
 ### Analytics
 
-- [ ] **ANLY-01**: A privacy-first analytics tool (Plausible OR Umami OR Fathom — decision during phase) is installed on both pages, tracking pageviews + the `data-cta` click events
-- [ ] **ANLY-02**: Analytics choice is consistent with the "no cookie banner if avoidable" constraint — i.e., cookieless by design
+- [x] **ANLY-01**: A privacy-first analytics tool (Plausible OR Umami OR Fathom — decision during phase) is installed on both pages, tracking pageviews + the `data-cta` click events
+- [x] **ANLY-02**: Analytics choice is consistent with the "no cookie banner if avoidable" constraint — i.e., cookieless by design
 
 ### Launch Infrastructure
 
@@ -106,8 +106,8 @@ Explicitly excluded. Documented to prevent scope creep.
 | POST-01 | Phase 5 — Post-purchase handoff | Complete |
 | POST-02 | Phase 3 — Copy lock | Complete |
 | POST-03 | Phase 5 — Post-purchase handoff | Complete |
-| ANLY-01 | Phase 6 — Measurement | Pending |
-| ANLY-02 | Phase 6 — Measurement | Pending |
+| ANLY-01 | Phase 6 — Measurement | Complete |
+| ANLY-02 | Phase 6 — Measurement | Complete |
 | INFR-01 | Phase 1 — Production floor | Complete |
 | INFR-02 | Phase 1 — Production floor | Complete |
 | INFR-03 | Phase 3 — Copy lock | Complete |

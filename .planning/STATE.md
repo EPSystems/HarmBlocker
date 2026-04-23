@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed 05-post-purchase-handoff-01-PLAN.md
-last_updated: "2026-04-23T19:54:29.558Z"
+stopped_at: Completed 06-measurement-01-PLAN.md
+last_updated: "2026-04-23T19:58:00.000Z"
 last_activity: 2026-04-23
 progress:
   total_phases: 7
   completed_phases: 5
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 6
+  completed_plans: 6
   percent: 100
 ---
 
@@ -21,13 +21,13 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-23)
 
 **Core value:** A Bulgarian customer can land on the site, understand the product in under 30 seconds, pay with a card, and reach a setup flow that actually gets the blocker running — without ever feeling shamed, judged, or marketed-at.
-**Current focus:** Phase 05 — post-purchase-handoff (complete); next Phase 06 — measurement
+**Current focus:** Phase 06 — measurement (complete); next Phase 07 — pre-launch audit
 
 ## Current Position
 
 Phase: 6
-Plan: Not started
-Status: Phase complete — ready for verification
+Plan: 1 of 1 complete
+Status: Phase complete — ready for Phase 7
 Last activity: 2026-04-23
 
 Progress: [██████████] 100%
@@ -57,6 +57,7 @@ Progress: [██████████] 100%
 | Phase 03-copy-lock P01 | 3m 8s | 5 tasks | 7 files |
 | Phase 04-checkout-live P01 | 2m 25s | 4 tasks | 3 files |
 | Phase 05-post-purchase-handoff P01 | 2m 25s | 3 tasks | 2 files |
+| Phase 06-measurement P01 | 2min | 4 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -86,6 +87,8 @@ Decisions are logged in PROJECT.md Key Decisions table. Recent decisions affecti
 - [Phase 05-post-purchase-handoff]: Cal.com embed uses iframe fallback (no `<script>` hydration) against __CALCOM_BOOKING_URL__ placeholder — zero runtime JS, no tracker load, lighter paint; user swaps slug before launch (e.g. `harmblocker/support-call`)
 - [Phase 05-post-purchase-handoff]: Support section on success.html colocates POST-01 (Cal.com) and POST-03 (14-day notice) in a single `.section--support` — notice reads as a natural footnote to the support offer, .price-note reused verbatim from Phase 4 pre-purchase disclosure (same /terms#отказ anchor)
 - [Phase 05-post-purchase-handoff]: New .calcom-frame primitive uses only existing tokens (--paper-soft, --hairline, --radius-md, --space-7) plus widget-driven literal max-width 760px and min-height 640px; no new design tokens introduced
+- [Phase 06-measurement]: Plausible chosen over Umami/Fathom — tagged-events.js variant enables class-based CTA click tracking without any custom JS; __ANALYTICS_SITE_ID__ placeholder follows project swap convention
+- [Phase 06-measurement]: ANLY-02 confirmed satisfied — Plausible is cookieless, no persistent identifiers; Phase 2 cookie-banner decision remains valid per COOKIE-DECISION.md Phase 6 Outcome section
 
 ### Pending Todos
 
@@ -98,10 +101,10 @@ None yet.
 [Issues that affect future work]
 
 - Phase 2 (Legal floor) depends on a real entity name + registered address if any — if the founding entity is not yet formed, LEG-05 surfaces that fact before Phase 4 (Checkout) can legitimately go live
-- Phase 6 analytics tool choice (Plausible vs Umami vs Fathom) is a decision to make during that phase; the choice must remain cookieless to keep the Phase 2 cookie-banner decision valid
+- Phase 6 analytics tool choice resolved: Plausible chosen (tagged-events.js, cookieless). COOKIE-DECISION.md Phase 2 decision confirmed valid — no cookie banner required.
 
 ## Session Continuity
 
-Last session: 2026-04-23T19:52:57.319Z
-Stopped at: Completed 05-post-purchase-handoff-01-PLAN.md
+Last session: 2026-04-23T19:58:00.000Z
+Stopped at: Completed 06-measurement-01-PLAN.md
 Resume file: None
