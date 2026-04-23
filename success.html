@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Всичко е готово — HarmBlocker</title>
+    <meta
+      name="description"
+      content="Добре дошли в HarmBlocker. Следвайте наръчника стъпка по стъпка, за да активирате защитата на устройствата си за по-малко от 2 минути."
+    />
+    <meta name="theme-color" content="#f6f1e8" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="siteNav">
+      <div class="container nav__inner">
+        <a href="index.html" class="brand" aria-label="Начало на HarmBlocker">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.25">
+              <circle cx="14" cy="14" r="12.5" />
+              <circle cx="14" cy="14" r="8.5" />
+              <circle cx="14" cy="14" r="3" fill="currentColor" stroke="none" />
+            </svg>
+          </span>
+          <span class="brand__word">HarmBlocker</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ SUCCESS HERO ============ -->
+      <section class="success-hero">
+        <div class="container">
+          <div class="reveal">
+            <svg class="success-seal" viewBox="0 0 96 96" fill="none" stroke="currentColor" aria-hidden="true">
+              <!-- Concentric rings — signet mark, matching hero motif -->
+              <circle cx="48" cy="48" r="46" stroke-width="1" opacity="0.18" />
+              <circle cx="48" cy="48" r="38" stroke-width="1" opacity="0.32" />
+              <circle cx="48" cy="48" r="30" stroke-width="1" opacity="0.5" />
+              <circle cx="48" cy="48" r="22" stroke-width="1.25" opacity="0.8" />
+              <!-- Center check -->
+              <path d="m38 48 8 8 14-16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="eyebrow eyebrow--centered">Потвърждение</span>
+            <h1 class="h1" style="margin-top: var(--space-5)">
+              Всичко е <span class="serif-italic">готово.</span>
+            </h1>
+            <p>
+              Следвайте наръчника стъпка по стъпка, за да активирате защитата
+              на устройствата си. Отнема по-малко от две минути.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SETUP STEPS ============ -->
+      <section class="section section--tight">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow eyebrow--centered">Наръчник</span>
+            <h2 class="h2">Как да <span class="serif-italic">включите защитата.</span></h2>
+            <p class="lead">Три бързи стъпки. Еднакви за всяко устройство.</p>
+          </div>
+
+          <ol class="setup-steps">
+            <li class="setup-step reveal">
+              <span class="setup-step__badge">I.</span>
+              <h3>Проверете имейла за добре дошли</h3>
+              <p>
+                Изпратихме ви настройките за защита за вашия акаунт. Запазете
+                този имейл — ще ви е нужен на следващата стъпка.
+              </p>
+            </li>
+
+            <li class="setup-step reveal">
+              <span class="setup-step__badge">II.</span>
+              <h3>Отворете настройките на устройството</h3>
+              <p>
+                Отидете в настройките на вашия телефон, таблет или компютър.
+                Използвайте наръчника по-долу за конкретното устройство.
+              </p>
+            </li>
+
+            <li class="setup-step reveal">
+              <span class="setup-step__badge">III.</span>
+              <h3>Приложете и сте защитени</h3>
+              <p>
+                Поставете настройките за защита от имейла, запазете — и веднага
+                се насладете на по-чист, по-тих интернет.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ DEVICES ============ -->
+      <section class="section section--surface section--tight">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow eyebrow--centered">Устройства</span>
+            <h2 class="h2">Изберете <span class="serif-italic">вашето устройство.</span></h2>
+            <p class="lead">Кратки и прости инструкции за всяко едно.</p>
+          </div>
+
+          <div class="devices">
+            <!-- PHONE -->
+            <article class="device reveal">
+              <span class="device__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="6" y="2" width="12" height="20" rx="2" />
+                  <path d="M11 18h2" />
+                </svg>
+              </span>
+              <h3>На телефона</h3>
+              <ol>
+                <li>Отворете приложението Настройки.</li>
+                <li>Намерете секцията за мрежа или интернет.</li>
+                <li>Поставете настройките за защита от имейла.</li>
+              </ol>
+            </article>
+
+            <!-- TABLET -->
+            <article class="device reveal">
+              <span class="device__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="3" width="16" height="18" rx="2" />
+                  <path d="M10 18h4" />
+                </svg>
+              </span>
+              <h3>На таблета</h3>
+              <ol>
+                <li>Отворете приложението Настройки.</li>
+                <li>Намерете секцията за мрежа или интернет.</li>
+                <li>Поставете настройките за защита от имейла.</li>
+              </ol>
+            </article>
+
+            <!-- COMPUTER -->
+            <article class="device reveal">
+              <span class="device__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="13" rx="1.5" />
+                  <path d="M8 21h8" />
+                  <path d="M12 17v4" />
+                </svg>
+              </span>
+              <h3>На компютъра</h3>
+              <ol>
+                <li>Отворете системните настройки.</li>
+                <li>Отидете в настройките за мрежа.</li>
+                <li>Поставете настройките за защита от имейла.</li>
+              </ol>
+            </article>
+          </div>
+
+          <div class="help-card reveal">
+            <h3>Затруднявате се? Ще ви помогнем.</h3>
+            <p>Нашият екип отговаря в рамките на няколко часа — без технически език.</p>
+            <a href="mailto:support@harmblocker.example">support@harmblocker.example</a>
+          </div>
+
+          <div class="return-home">
+            <a href="index.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+              Обратно към началото
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>© <span id="year">2026</span> HarmBlocker — По-тих интернет за всеки.</div>
+        <nav class="footer__links" aria-label="Долен колонтитул">
+          <a href="#">Поверителност</a>
+          <a href="#">Поддръжка</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
