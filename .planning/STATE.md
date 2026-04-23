@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed 01-production-floor-01-PLAN.md
-last_updated: "2026-04-23T19:15:49.568Z"
+stopped_at: Completed 02-legal-floor-01-PLAN.md
+last_updated: "2026-04-23T19:28:07.270Z"
 last_activity: 2026-04-23
 progress:
   total_phases: 7
-  completed_phases: 1
-  total_plans: 1
-  completed_plans: 1
-  percent: 0
+  completed_phases: 2
+  total_plans: 2
+  completed_plans: 2
+  percent: 100
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-23)
 
 **Core value:** A Bulgarian customer can land on the site, understand the product in under 30 seconds, pay with a card, and reach a setup flow that actually gets the blocker running — without ever feeling shamed, judged, or marketed-at.
-**Current focus:** Phase 01 — production-floor
+**Current focus:** Phase 02 — legal-floor
 
 ## Current Position
 
-Phase: 2
+Phase: 3
 Plan: Not started
 Status: Phase complete — ready for verification
 Last activity: 2026-04-23
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -53,6 +53,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-production-floor P01 | 2min | 3 tasks | 2 files |
+| Phase 02-legal-floor P01 | 4min | 4 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -67,6 +68,10 @@ Decisions are logged in PROJECT.md Key Decisions table. Recent decisions affecti
 - [Phase 01-production-floor]: HSTS max-age=63072000 with includeSubDomains and preload; optional hstspreload.org submission documented in DEPLOY.md
 - [Phase 01-production-floor]: Permissions-Policy disables camera, microphone, geolocation, and interest-cohort (FLoC/Topics opt-out)
 - [Phase 01-production-floor]: vercel.json stays minimal: no functions, rewrites, redirects, or env — cleanUrls:true enables future /privacy and /terms routes without config change
+- [Phase 02-legal-floor]: No cookie banner ships in v1.0 — site sets no own cookies and Phase 6 commits to cookieless analytics; revisit triggers documented in .planning/phases/02-legal-floor/COOKIE-DECISION.md
+- [Phase 02-legal-floor]: Entity placeholders use grep-able __ENTITY_NAME__ / __ENTITY_ADDRESS__ / __CONTACT_EMAIL__ tokens across all 4 pages and both legal drafts; user-swap before launch
+- [Phase 02-legal-floor]: Legal drafts marked two ways — HTML comment (developer-visible) and visible .legal-banner in Bulgarian (reader-visible); both must be removed after lawyer sign-off
+- [Phase 02-legal-floor]: 14-day right-of-withdrawal clause in terms.html cites both ЗЗП чл. 50–57 and Directive 2011/83/ЕС and includes a copyable blockquote cancellation template; heading is stable anchor text for Phase 4 LEG-04 pre-purchase disclosure
 
 ### Pending Todos
 
@@ -83,6 +88,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-23T19:12:11.571Z
-Stopped at: Completed 01-production-floor-01-PLAN.md
+Last session: 2026-04-23T19:28:07.264Z
+Stopped at: Completed 02-legal-floor-01-PLAN.md
 Resume file: None

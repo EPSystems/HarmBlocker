@@ -16,12 +16,12 @@ Requirements for the **Launch-Ready** milestone. Each maps to roadmap phases.
 
 ### Legal
 
-- [ ] **LEG-01**: Privacy Policy page exists in Bulgarian, GDPR-compliant, linked from footer on every page and referenced during checkout
-- [ ] **LEG-02**: Terms of Service page exists in Bulgarian, linked from footer on every page and referenced during checkout
-- [ ] **LEG-03**: Terms of Service includes explicit 14-day right-of-withdrawal clause (EU distance-selling law for B2C)
+- [x] **LEG-01**: Privacy Policy page exists in Bulgarian, GDPR-compliant, linked from footer on every page and referenced during checkout
+- [x] **LEG-02**: Terms of Service page exists in Bulgarian, linked from footer on every page and referenced during checkout
+- [x] **LEG-03**: Terms of Service includes explicit 14-day right-of-withdrawal clause (EU distance-selling law for B2C)
 - [ ] **LEG-04**: 14-day withdrawal disclosure is surfaced pre-purchase (near the pricing CTA) and post-purchase (on `success.html`), not hidden only in ToS
-- [ ] **LEG-05**: Footer contains the company details required for EU B2C commerce: company/entity name, contact email, registered address if applicable
-- [ ] **LEG-06**: Cookie consent banner is evaluated — only shipped if the chosen analytics tool requires it; skipped if cookieless
+- [x] **LEG-05**: Footer contains the company details required for EU B2C commerce: company/entity name, contact email, registered address if applicable
+- [x] **LEG-06**: Cookie consent banner is evaluated — only shipped if the chosen analytics tool requires it; skipped if cookieless
 
 ### Post-Purchase Flow
 
@@ -97,12 +97,12 @@ Explicitly excluded. Documented to prevent scope creep.
 | CHKT-02 | Phase 4 — Checkout live | Pending |
 | CHKT-03 | Phase 4 — Checkout live | Pending |
 | CHKT-04 | Phase 4 — Checkout live | Pending |
-| LEG-01 | Phase 2 — Legal floor | Pending |
-| LEG-02 | Phase 2 — Legal floor | Pending |
-| LEG-03 | Phase 2 — Legal floor | Pending |
+| LEG-01 | Phase 2 — Legal floor | Complete |
+| LEG-02 | Phase 2 — Legal floor | Complete |
+| LEG-03 | Phase 2 — Legal floor | Complete |
 | LEG-04 | Phase 4 — Checkout live | Pending |
-| LEG-05 | Phase 2 — Legal floor | Pending |
-| LEG-06 | Phase 2 — Legal floor | Pending |
+| LEG-05 | Phase 2 — Legal floor | Complete |
+| LEG-06 | Phase 2 — Legal floor | Complete |
 | POST-01 | Phase 5 — Post-purchase handoff | Pending |
 | POST-02 | Phase 3 — Copy lock | Pending |
 | POST-03 | Phase 5 — Post-purchase handoff | Pending |

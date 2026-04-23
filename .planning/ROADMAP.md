@@ -27,7 +27,7 @@ Phase 4 (checkout) depends on Phases 2 and 3. Phases 5, 6 can run in parallel
 after Phase 4. Phase 7 runs last.
 
 - [ ] **Phase 1: Production floor** - Domain, static host, and HTTPS so the site has a real home
-- [ ] **Phase 2: Legal floor** - Privacy Policy, Terms of Service with 14-day withdrawal clause, footer entity details, cookie-banner decision
+- [x] **Phase 2: Legal floor** - Privacy Policy, Terms of Service with 14-day withdrawal clause, footer entity details, cookie-banner decision
 - [ ] **Phase 3: Copy lock** - Editorial pass on `index.html`, real copy on `success.html`, SEO baseline metadata
 - [ ] **Phase 4: Checkout live** - Stripe subscription wired to both CTAs, pre-purchase 14-day disclosure surfaced near pricing
 - [ ] **Phase 5: Post-purchase handoff** - Cal.com booking embed and 14-day withdrawal notice on `success.html`
@@ -57,7 +57,8 @@ after Phase 4. Phase 7 runs last.
   2. A visitor can open a Bulgarian Terms of Service page from the footer of every page, and the ToS contains an explicit 14-day right-of-withdrawal clause
   3. The footer on every page shows the company/entity name, contact email, and registered address where applicable
   4. A documented decision exists recording whether a cookie banner ships or is skipped, with the reason tied to the analytics choice
-**Plans**: TBD
+**Plans**: 1 plan
+- [x] 02-legal-floor-01-PLAN.md — privacy.html + terms.html + consolidated footer + COOKIE-DECISION.md
 **UI hint**: yes
 
 ### Phase 3: Copy lock
@@ -123,8 +124,8 @@ Phases 1 and 2 may execute in parallel. Phases 5 and 6 may execute in parallel a
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Production floor | 0/TBD | Not started | - |
-| 2. Legal floor | 0/TBD | Not started | - |
+| 1. Production floor | 1/1 | Complete | 2026-04-23 |
+| 2. Legal floor | 1/1 | Complete | 2026-04-23 |
 | 3. Copy lock | 0/TBD | Not started | - |
 | 4. Checkout live | 0/TBD | Not started | - |
 | 5. Post-purchase handoff | 0/TBD | Not started | - |
