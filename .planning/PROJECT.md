@@ -22,30 +22,33 @@ marketed-at.
 
 <!-- Shipped and confirmed valuable. -->
 
-- ✓ Landing page with hero, how-it-works, benefits, pricing, footer — existing (pre-GSD)
-- ✓ Post-purchase success page with setup guide and device instructions — existing (pre-GSD)
-- ✓ "Quiet Confidence" design system — Instrument Serif + Inter, amber single-accent, paper/ink palette, hairline-not-shadows, signet motif — existing (pre-GSD)
-- ✓ Bulgarian-first copy throughout, calm/non-shaming tone — existing (pre-GSD)
-- ✓ Static deploy (no build tools, works on any static host) — existing (pre-GSD)
+- ✓ Landing page with hero, how-it-works, benefits, pricing, footer — pre-GSD
+- ✓ Post-purchase success page with setup guide and device instructions — pre-GSD
+- ✓ "Quiet Confidence" design system — Instrument Serif + Inter, amber single-accent, paper/ink palette, hairline-not-shadows, signet motif — pre-GSD
+- ✓ Bulgarian-first copy throughout, calm/non-shaming tone — pre-GSD
+- ✓ Static deploy (no build tools, works on any static host) — pre-GSD
+- ✓ Stripe Checkout placeholder wired on both CTAs (pending user swap) — v1.0 (Phase 4)
+- ✓ Stripe success/cancel redirect URLs documented for user configuration — v1.0 (Phase 4)
+- ✓ GDPR-compliant Bulgarian Privacy Policy draft, linked from footer — v1.0 (Phase 2)
+- ✓ Bulgarian Terms of Service draft with explicit 14-day right-of-withdrawal clause — v1.0 (Phase 2)
+- ✓ 14-day withdrawal disclosure on pricing CTA (Phase 4) and on success page (Phase 5) — v1.0
+- ✓ Cookie-banner decision documented: not shipped, cookieless analytics chosen — v1.0 (Phase 2, re-confirmed Phase 6)
+- ✓ Plausible analytics (cookieless, tagged-events) installed on both pages — v1.0 (Phase 6)
+- ✓ Cal.com booking iframe embed on success page (pending user swap) — v1.0 (Phase 5)
+- ✓ Real DIY delivery-flow copy on success.html — v1.0 (Phase 3)
+- ✓ Vercel + Hostinger as hosting/domain stack — vercel.json + DEPLOY.md — v1.0 (Phase 1)
+- ✓ Entity-placeholder footer on all 4 pages (`__ENTITY_NAME__` / `__ENTITY_ADDRESS__` / `__CONTACT_EMAIL__`) — v1.0 (Phase 2)
+- ✓ SEO baseline (title, meta description, OG, Twitter-card, favicon SVG, sitemap.xml, robots.txt) — v1.0 (Phase 3)
+- ✓ Brand-voice copy audit of index.html and success.html — v1.0 (Phase 3)
+- ✓ Retroactive 6-pillar UI review — 23/24 score, 2 fixes applied, 1 deferred — v1.0 (Phase 7)
+- ✓ OG image (og-image.svg) shipped — v1.0 (Phase 7 fix)
+- ✓ SEO meta parity on legal pages with noindex-until-lawyer-review gate — v1.0 (Phase 7 fix)
 
 ### Active
 
-<!-- Current scope. Milestone 1: Launch-Ready. -->
+<!-- Current scope. No active milestone — run /gsd:new-milestone when ready. -->
 
-- [ ] Stripe Checkout wired on both CTAs (data-cta="hero", data-cta="pricing"), EUR 3/mo subscription
-- [ ] Stripe success-redirect configured to return to `success.html` with session validation
-- [ ] Privacy Policy page (GDPR-compliant, Bulgarian) linked from footer + checkout
-- [ ] Terms of Service page (Bulgarian) linked from footer + checkout, includes 14-day right-of-withdrawal clause
-- [ ] 14-day withdrawal disclosure surfaced in checkout confirmation and on success page
-- [ ] Cookie consent banner (only if analytics requires it — spec says no, keep as safety net)
-- [ ] Privacy-first analytics installed (Plausible / Umami / Fathom — choose during phase)
-- [ ] Cal.com / Calendly booking embed on `success.html` for support-meeting requests
-- [ ] Real copy pass on `success.html` — current setup instructions are placeholder-ish; must reflect actual DIY delivery flow
-- [ ] Domain + production hosting decision (static host — Netlify / Vercel / Cloudflare Pages)
-- [ ] Footer hardened with company details required for EU B2C commerce (company name, address if registered entity, contact)
-- [ ] SEO baseline: title, description, OpenGraph, favicon, sitemap.xml, robots.txt
-- [ ] Copy audit of `index.html` for any placeholder/first-draft language before money changes hands
-- [ ] Retroactive UI review of shipped landing + success pages (triggers `/gsd:ui-review`)
+(No active milestone)
 
 ### Out of Scope
 
@@ -184,5 +187,34 @@ This document evolves at phase transitions and milestone boundaries.
 3. Audit Out of Scope — reasons still valid?
 4. Update Context with current state
 
+## Current State
+
+**Shipped:** v1.0 Launch-Ready — 7 phases, 21 requirements, 0 critical gaps.
+
+The site is repo-complete for launch. All runtime code, legal drafts, analytics,
+and handoff docs are in place. Remaining gates are entirely user-action:
+
+- Provision Vercel project; point Hostinger DNS at Vercel
+- Create Stripe account; swap `__STRIPE_CHECKOUT_URL__`
+- Create Cal.com account; swap `__CALCOM_BOOKING_URL__`
+- Create Plausible account; swap `__ANALYTICS_SITE_ID__`
+- Bulgarian lawyer review of `privacy.html` + `terms.html`; remove draft banner + `noindex` meta after approval
+- Swap `__ENTITY_NAME__` / `__ENTITY_ADDRESS__` / `__CONTACT_EMAIL__` across 4 HTML pages
+
+See `DEPLOY.md` and `.planning/milestones/v1.0-MILESTONE-AUDIT.md` for the full
+launch-readiness checklist.
+
+## Next Milestone Goals
+
+Once v1.0 is live and validated with real customers, candidate directions for v1.1:
+
+- **Local BG payment methods** — Borica / EasyPay / Revolut Pay integration
+- **VAT-invoice automation** — auto-generate `фактура` on purchase
+- **"За църкви и общности" page** — dedicated partnership/community track
+- **Referral / affiliate mechanism** — if organic growth stalls
+- **Funnel analytics dashboard + A/B testing** — if conversion optimization becomes a priority
+
+Run `/gsd:new-milestone` to formally define v1.1 scope.
+
 ---
-*Last updated: 2026-04-23 after initialization*
+*Last updated: 2026-04-23 after v1.0 Launch-Ready milestone*
