@@ -1,8 +1,14 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # HarmBlocker — Project Guide
 
 Static Bulgarian landing page + success page for **HarmBlocker**, a subscription
 that blocks adult content and dating apps across a household's devices.
-3€ / month. Plain HTML + CSS + vanilla JS. No build tools.
+3€ / month. Plain HTML + CSS + vanilla JS. No build tools, no tests, no linter —
+ship by uploading the four files to any static host (Netlify/Vercel/Cloudflare
+Pages/GitHub Pages).
 
 ## Files
 
@@ -240,3 +246,69 @@ Lemon Squeezy checkout:
 2. Point the checkout provider's success redirect back to `success.html`.
 
 Nothing else to change — there's no state, no auth, no backend here.
+
+<!-- GSD:project-start source:PROJECT.md -->
+## Project
+
+**HarmBlocker**
+
+HarmBlocker е абонамент за 3€/месец, който блокира порнография и dating приложения
+на всички устройства в домакинството. Продуктът е насочен към българския пазар —
+семейства, двойки и общности, които искат тих, нестигматизиращ инструмент за
+защита на дома. Този repo е маркетинговият сайт + post-purchase setup flow;
+самият блокиращ механизъм (DNS service / app / extension) е отделен продукт
+извън обхвата на това хранилище.
+
+**Core Value:** A Bulgarian customer can land on the site, understand the product in under 30
+seconds, pay with a card, and reach a setup flow that actually gets the blocker
+running on their household devices — without ever feeling shamed, judged, or
+marketed-at.
+
+### Constraints
+
+- **Tech stack:** Static HTML/CSS/JS only. No frameworks, no build step. Stripe Checkout is a redirect, not a SDK integration. Why: matches team size, keeps hosting trivial, zero maintenance burden.
+- **Language:** All user-facing copy in Bulgarian. No i18n system needed. Why: explicit market focus; i18n adds friction without upside at this stage.
+- **Design system:** Locked to "Quiet Confidence" as documented in `CLAUDE.md` — no new fonts, no new colors, no shadows, no pill shapes, no tinted-circle icons, no third illustration. Why: the brand differentiation depends on restraint.
+- **Privacy:** Privacy-first posture is non-negotiable. No third-party trackers beyond Stripe + chosen cookieless analytics. Why: product is about trust and discretion; GA4 contradicts the brand promise.
+- **Legal floor:** Before first real charge, v1 must ship with Privacy Policy, Terms of Service (with 14-day withdrawal clause), and a cookie banner if the analytics choice requires one. Why: EU/BG consumer-protection + GDPR compliance.
+- **Budget:** Small-team bootstrap. Favor free/low-cost tooling (Stripe standard fees; Plausible/Umami self-host or cheap tier; Cal.com free tier; Cloudflare Pages/Netlify free tier). Why: pre-revenue.
+- **Timeline:** Flexible — quality over speed. Why: no funding clock or external deadline; the wrong launch would hurt the brand more than a slow launch.
+<!-- GSD:project-end -->
+
+<!-- GSD:stack-start source:STACK.md -->
+## Technology Stack
+
+Technology stack not yet documented. Will populate after codebase mapping or first phase.
+<!-- GSD:stack-end -->
+
+<!-- GSD:conventions-start source:CONVENTIONS.md -->
+## Conventions
+
+Conventions not yet established. Will populate as patterns emerge during development.
+<!-- GSD:conventions-end -->
+
+<!-- GSD:architecture-start source:ARCHITECTURE.md -->
+## Architecture
+
+Architecture not yet mapped. Follow existing patterns found in the codebase.
+<!-- GSD:architecture-end -->
+
+<!-- GSD:workflow-start source:GSD defaults -->
+## GSD Workflow Enforcement
+
+Before using Edit, Write, or other file-changing tools, start work through a GSD command so planning artifacts and execution context stay in sync.
+
+Use these entry points:
+- `/gsd:quick` for small fixes, doc updates, and ad-hoc tasks
+- `/gsd:debug` for investigation and bug fixing
+- `/gsd:execute-phase` for planned phase work
+
+Do not make direct repo edits outside a GSD workflow unless the user explicitly asks to bypass it.
+<!-- GSD:workflow-end -->
+
+<!-- GSD:profile-start -->
+## Developer Profile
+
+> Profile not yet configured. Run `/gsd:profile-user` to generate your developer profile.
+> This section is managed by `generate-claude-profile` -- do not edit manually.
+<!-- GSD:profile-end -->

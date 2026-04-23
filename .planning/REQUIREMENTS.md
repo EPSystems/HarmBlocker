@@ -91,37 +91,42 @@ Explicitly excluded. Documented to prevent scope creep.
 
 ## Traceability
 
-Populated during roadmap creation.
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CHKT-01 | — | Pending |
-| CHKT-02 | — | Pending |
-| CHKT-03 | — | Pending |
-| CHKT-04 | — | Pending |
-| LEG-01 | — | Pending |
-| LEG-02 | — | Pending |
-| LEG-03 | — | Pending |
-| LEG-04 | — | Pending |
-| LEG-05 | — | Pending |
-| LEG-06 | — | Pending |
-| POST-01 | — | Pending |
-| POST-02 | — | Pending |
-| POST-03 | — | Pending |
-| ANLY-01 | — | Pending |
-| ANLY-02 | — | Pending |
-| INFR-01 | — | Pending |
-| INFR-02 | — | Pending |
-| INFR-03 | — | Pending |
-| INFR-04 | — | Pending |
-| INFR-05 | — | Pending |
-| AUDT-01 | — | Pending |
+| CHKT-01 | Phase 4 — Checkout live | Pending |
+| CHKT-02 | Phase 4 — Checkout live | Pending |
+| CHKT-03 | Phase 4 — Checkout live | Pending |
+| CHKT-04 | Phase 4 — Checkout live | Pending |
+| LEG-01 | Phase 2 — Legal floor | Pending |
+| LEG-02 | Phase 2 — Legal floor | Pending |
+| LEG-03 | Phase 2 — Legal floor | Pending |
+| LEG-04 | Phase 4 — Checkout live | Pending |
+| LEG-05 | Phase 2 — Legal floor | Pending |
+| LEG-06 | Phase 2 — Legal floor | Pending |
+| POST-01 | Phase 5 — Post-purchase handoff | Pending |
+| POST-02 | Phase 3 — Copy lock | Pending |
+| POST-03 | Phase 5 — Post-purchase handoff | Pending |
+| ANLY-01 | Phase 6 — Measurement | Pending |
+| ANLY-02 | Phase 6 — Measurement | Pending |
+| INFR-01 | Phase 1 — Production floor | Pending |
+| INFR-02 | Phase 1 — Production floor | Pending |
+| INFR-03 | Phase 3 — Copy lock | Pending |
+| INFR-04 | Phase 3 — Copy lock | Pending |
+| INFR-05 | Phase 1 — Production floor | Pending |
+| AUDT-01 | Phase 7 — Pre-launch audit | Pending |
 
 **Coverage:**
 - v1 requirements: 21 total
-- Mapped to phases: 0 (roadmap pending)
-- Unmapped: 21 ⚠️ (will be mapped by roadmapper)
+- Mapped to phases: 21 ✓
+- Unmapped: 0
+
+**Note on LEG-04 vs POST-03:** LEG-04 mandates the 14-day withdrawal disclosure
+appear both pre-purchase (near pricing CTA) and post-purchase (on `success.html`).
+LEG-04 is assigned to Phase 4 where the pre-purchase CTA-adjacent disclosure
+lives. POST-03 is the separate, explicit requirement for the success-page
+surface of the same right and is assigned to Phase 5. Together they cover the
+full LEG-04 mandate without either phase becoming ambiguous.
 
 ---
 *Requirements defined: 2026-04-23*
-*Last updated: 2026-04-23 after initial definition*
+*Last updated: 2026-04-23 after roadmap creation — traceability table populated*
