@@ -128,7 +128,7 @@ Phases 1 and 2 may execute in parallel. Phases 5 and 6 may execute in parallel a
 | 1. Production floor | 1/1 | Complete | 2026-04-23 |
 | 2. Legal floor | 1/1 | Complete | 2026-04-23 |
 | 3. Copy lock | 1/1 | Complete | 2026-04-23 |
-| 4. Checkout live | 0/TBD | Not started | - |
+| 4. Checkout live | 1/1 | Complete | 2026-04-23 |
 | 5. Post-purchase handoff | 0/TBD | Not started | - |
 | 6. Measurement | 0/TBD | Not started | - |
 | 7. Pre-launch audit | 0/TBD | Not started | - |

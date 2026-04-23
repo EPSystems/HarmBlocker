@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed 03-copy-lock-01-PLAN.md
-last_updated: "2026-04-23T19:40:01.062Z"
+stopped_at: Completed 04-checkout-live-01-PLAN.md
+last_updated: "2026-04-23T19:46:18.536Z"
 last_activity: 2026-04-23
 progress:
   total_phases: 7
-  completed_phases: 3
-  total_plans: 3
-  completed_plans: 3
+  completed_phases: 4
+  total_plans: 4
+  completed_plans: 4
   percent: 100
 ---
 
@@ -21,12 +21,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-23)
 
 **Core value:** A Bulgarian customer can land on the site, understand the product in under 30 seconds, pay with a card, and reach a setup flow that actually gets the blocker running — without ever feeling shamed, judged, or marketed-at.
-**Current focus:** Phase 03 — copy-lock (complete); next Phase 04 — checkout-live
+**Current focus:** Phase 04 — checkout-live (complete); next Phase 05 — post-purchase-handoff
 
 ## Current Position
 
 Phase: 4
-Plan: Not started
+Plan: 1 of 1 complete
 Status: Phase complete — ready for verification
 Last activity: 2026-04-23
 
@@ -55,6 +55,7 @@ Progress: [██████████] 100%
 | Phase 01-production-floor P01 | 2min | 3 tasks | 2 files |
 | Phase 02-legal-floor P01 | 4min | 4 tasks | 6 files |
 | Phase 03-copy-lock P01 | 3m 8s | 5 tasks | 7 files |
+| Phase 04-checkout-live P01 | 2m 25s | 4 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -77,6 +78,10 @@ Decisions are logged in PROJECT.md Key Decisions table. Recent decisions affecti
 - [Phase 03-copy-lock]: OG image referenced at /og-image.svg but asset itself deferred to later polish pass (documented inline in HTML comment)
 - [Phase 03-copy-lock]: success.html pivots from vague 'поставете настройките за защита' to concrete 'въведете двата DNS адреса от имейла' — router-first as the тих default
 - [Phase 03-copy-lock]: how-it-works step I rewritten from 'Регистрирайте се' to 'Платете с карта' — v1 has no account; Stripe manages subscription state
+- [Phase 04-checkout-live]: Stripe Checkout ships as __STRIPE_CHECKOUT_URL__ placeholder on both CTAs with 4-line HTML swap comment above each (success URL, cancel URL, product spec); user swaps before launch
+- [Phase 04-checkout-live]: Pricing card now shows two distinct lines below CTA — statutory 14-day withdrawal disclosure (.price-note, links to /terms#отказ) then cancel-anytime courtesy (.price-card__small); both preserved
+- [Phase 04-checkout-live]: 14-day anchor is id="отказ" (Bulgarian, consistent with Bulgarian-only copy stance) — modern browsers URL-encode non-ASCII anchors transparently
+- [Phase 04-checkout-live]: .price-note link treatment reuses footer__entity-meta hairline-amber pattern (amber-soft → amber on hover); no new link style invented
 
 ### Pending Todos
 
@@ -93,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-23T19:38:41.942Z
-Stopped at: Completed 03-copy-lock-01-PLAN.md
+Last session: 2026-04-23T19:46:18.529Z
+Stopped at: Completed 04-checkout-live-01-PLAN.md
 Resume file: None

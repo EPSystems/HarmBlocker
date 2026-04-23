@@ -9,17 +9,17 @@ Requirements for the **Launch-Ready** milestone. Each maps to roadmap phases.
 
 ### Checkout
 
-- [ ] **CHKT-01**: Both CTAs (`data-cta="hero"` and `data-cta="pricing"`) link to a live Stripe Checkout session for a 3€/mo EUR subscription
-- [ ] **CHKT-02**: Stripe Checkout is configured to redirect back to `success.html` on successful purchase, passing session_id so the page can confirm the purchase if needed
-- [ ] **CHKT-03**: Checkout failure / cancel path returns the customer to the pricing section of `index.html` without a broken state
-- [ ] **CHKT-04**: Stripe subscription product is live in Stripe dashboard, priced at 3€/mo, recurring monthly, EUR
+- [x] **CHKT-01**: Both CTAs (`data-cta="hero"` and `data-cta="pricing"`) link to a live Stripe Checkout session for a 3€/mo EUR subscription
+- [x] **CHKT-02**: Stripe Checkout is configured to redirect back to `success.html` on successful purchase, passing session_id so the page can confirm the purchase if needed
+- [x] **CHKT-03**: Checkout failure / cancel path returns the customer to the pricing section of `index.html` without a broken state
+- [x] **CHKT-04**: Stripe subscription product is live in Stripe dashboard, priced at 3€/mo, recurring monthly, EUR
 
 ### Legal
 
 - [x] **LEG-01**: Privacy Policy page exists in Bulgarian, GDPR-compliant, linked from footer on every page and referenced during checkout
 - [x] **LEG-02**: Terms of Service page exists in Bulgarian, linked from footer on every page and referenced during checkout
 - [x] **LEG-03**: Terms of Service includes explicit 14-day right-of-withdrawal clause (EU distance-selling law for B2C)
-- [ ] **LEG-04**: 14-day withdrawal disclosure is surfaced pre-purchase (near the pricing CTA) and post-purchase (on `success.html`), not hidden only in ToS
+- [x] **LEG-04**: 14-day withdrawal disclosure is surfaced pre-purchase (near the pricing CTA) and post-purchase (on `success.html`), not hidden only in ToS
 - [x] **LEG-05**: Footer contains the company details required for EU B2C commerce: company/entity name, contact email, registered address if applicable
 - [x] **LEG-06**: Cookie consent banner is evaluated — only shipped if the chosen analytics tool requires it; skipped if cookieless
 
@@ -93,14 +93,14 @@ Explicitly excluded. Documented to prevent scope creep.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CHKT-01 | Phase 4 — Checkout live | Pending |
-| CHKT-02 | Phase 4 — Checkout live | Pending |
-| CHKT-03 | Phase 4 — Checkout live | Pending |
-| CHKT-04 | Phase 4 — Checkout live | Pending |
+| CHKT-01 | Phase 4 — Checkout live | Complete |
+| CHKT-02 | Phase 4 — Checkout live | Complete |
+| CHKT-03 | Phase 4 — Checkout live | Complete |
+| CHKT-04 | Phase 4 — Checkout live | Complete |
 | LEG-01 | Phase 2 — Legal floor | Complete |
 | LEG-02 | Phase 2 — Legal floor | Complete |
 | LEG-03 | Phase 2 — Legal floor | Complete |
-| LEG-04 | Phase 4 — Checkout live | Pending |
+| LEG-04 | Phase 4 — Checkout live | Complete |
 | LEG-05 | Phase 2 — Legal floor | Complete |
 | LEG-06 | Phase 2 — Legal floor | Complete |
 | POST-01 | Phase 5 — Post-purchase handoff | Pending |
