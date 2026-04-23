@@ -45,7 +45,8 @@ after Phase 4. Phase 7 runs last.
   2. A commit to the main branch triggers an automatic deploy to production without manual intervention
   3. Any HTTP request to the domain is redirected to HTTPS, and HSTS is set on responses
   4. No mixed-content warnings appear in the browser console on either `index.html` or `success.html`
-**Plans**: TBD
+**Plans**: 1 plan
+- [x] 01-production-floor-01-PLAN.md — vercel.json + asset-origin audit + DEPLOY.md handoff
 
 ### Phase 2: Legal floor
 **Goal**: The site carries the legal surface area required to charge Bulgarian consumers — Privacy Policy, Terms of Service with 14-day withdrawal, entity details in the footer, and an explicit cookie-banner decision

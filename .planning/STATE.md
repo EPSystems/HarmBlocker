@@ -1,3 +1,19 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: verifying
+stopped_at: Completed 01-production-floor-01-PLAN.md
+last_updated: "2026-04-23T19:12:17.288Z"
+last_activity: 2026-04-23
+progress:
+  total_phases: 7
+  completed_phases: 1
+  total_plans: 1
+  completed_plans: 1
+  percent: 0
+---
+
 # Project State
 
 ## Project Reference
@@ -5,20 +21,21 @@
 See: .planning/PROJECT.md (updated 2026-04-23)
 
 **Core value:** A Bulgarian customer can land on the site, understand the product in under 30 seconds, pay with a card, and reach a setup flow that actually gets the blocker running — without ever feeling shamed, judged, or marketed-at.
-**Current focus:** Phase 1 — Production floor
+**Current focus:** Phase 01 — production-floor
 
 ## Current Position
 
-Phase: 1 of 7 (Production floor)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-04-23 — Roadmap created for Launch-Ready milestone
+Phase: 01 (production-floor) — EXECUTING
+Plan: 1 of 1
+Status: Phase complete — ready for verification
+Last activity: 2026-04-23
 
 Progress: [░░░░░░░░░░] 0%
 
 ## Performance Metrics
 
 **Velocity:**
+
 - Total plans completed: 0
 - Average duration: —
 - Total execution time: —
@@ -30,10 +47,12 @@ Progress: [░░░░░░░░░░] 0%
 | - | - | - | - |
 
 **Recent Trend:**
+
 - Last 5 plans: —
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01-production-floor P01 | 2min | 3 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -45,6 +64,9 @@ Decisions are logged in PROJECT.md Key Decisions table. Recent decisions affecti
 - Milestone 1: Stripe-only for v1, local BG payment methods deferred
 - Milestone 1: Cookieless analytics (Plausible/Umami/Fathom — chosen during Phase 6) to avoid cookie-banner tax
 - Milestone 1: Bulgarian-only copy; no i18n system
+- [Phase 01-production-floor]: HSTS max-age=63072000 with includeSubDomains and preload; optional hstspreload.org submission documented in DEPLOY.md
+- [Phase 01-production-floor]: Permissions-Policy disables camera, microphone, geolocation, and interest-cohort (FLoC/Topics opt-out)
+- [Phase 01-production-floor]: vercel.json stays minimal: no functions, rewrites, redirects, or env — cleanUrls:true enables future /privacy and /terms routes without config change
 
 ### Pending Todos
 
@@ -61,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-23
-Stopped at: Roadmap created; 7 phases defined, 21/21 requirements mapped
+Last session: 2026-04-23T19:12:11.571Z
+Stopped at: Completed 01-production-floor-01-PLAN.md
 Resume file: None
