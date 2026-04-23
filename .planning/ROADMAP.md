@@ -30,7 +30,7 @@ after Phase 4. Phase 7 runs last.
 - [x] **Phase 2: Legal floor** - Privacy Policy, Terms of Service with 14-day withdrawal clause, footer entity details, cookie-banner decision
 - [x] **Phase 3: Copy lock** - Editorial pass on `index.html`, real copy on `success.html`, SEO baseline metadata
 - [ ] **Phase 4: Checkout live** - Stripe subscription wired to both CTAs, pre-purchase 14-day disclosure surfaced near pricing
-- [ ] **Phase 5: Post-purchase handoff** - Cal.com booking embed and 14-day withdrawal notice on `success.html`
+- [x] **Phase 5: Post-purchase handoff** - Cal.com booking embed and 14-day withdrawal notice on `success.html`
 - [ ] **Phase 6: Measurement** - Privacy-first cookieless analytics tracking pageviews and CTA clicks
 - [ ] **Phase 7: Pre-launch audit** - Retroactive `/gsd:ui-review` of shipped landing and success pages, any fixes applied
 
@@ -94,7 +94,8 @@ after Phase 4. Phase 7 runs last.
   1. `success.html` embeds a working Cal.com or Calendly booking widget, and a visitor can reach the point of selecting a time slot without leaving the page
   2. `success.html` displays a visible, non-hidden 14-day right-of-withdrawal notice in the brand voice, linked to the ToS clause
   3. The booking widget and the withdrawal notice both render without breaking the "Quiet Confidence" layout, spacing, or type scale
-**Plans**: TBD
+**Plans**: 1 plan
+- [x] 05-post-purchase-handoff-01-PLAN.md — Cal.com iframe embed + 14-day withdrawal notice on success.html + .calcom-frame CSS primitive
 **UI hint**: yes
 
 ### Phase 6: Measurement
@@ -129,7 +130,7 @@ Phases 1 and 2 may execute in parallel. Phases 5 and 6 may execute in parallel a
 | 2. Legal floor | 1/1 | Complete | 2026-04-23 |
 | 3. Copy lock | 1/1 | Complete | 2026-04-23 |
 | 4. Checkout live | 1/1 | Complete | 2026-04-23 |
-| 5. Post-purchase handoff | 0/TBD | Not started | - |
+| 5. Post-purchase handoff | 1/1 | Complete | 2026-04-23 |
 | 6. Measurement | 0/TBD | Not started | - |
 | 7. Pre-launch audit | 0/TBD | Not started | - |
 

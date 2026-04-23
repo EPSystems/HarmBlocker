@@ -25,9 +25,9 @@ Requirements for the **Launch-Ready** milestone. Each maps to roadmap phases.
 
 ### Post-Purchase Flow
 
-- [ ] **POST-01**: `success.html` embeds a Cal.com / Calendly booking widget so customers can request a support meeting
+- [x] **POST-01**: `success.html` embeds a Cal.com / Calendly booking widget so customers can request a support meeting
 - [x] **POST-02**: `success.html` copy is rewritten to reflect the real DIY delivery model (current copy is placeholder-flavored)
-- [ ] **POST-03**: `success.html` includes a visible 14-day withdrawal notice (per LEG-04)
+- [x] **POST-03**: `success.html` includes a visible 14-day withdrawal notice (per LEG-04)
 
 ### Analytics
 
@@ -103,9 +103,9 @@ Explicitly excluded. Documented to prevent scope creep.
 | LEG-04 | Phase 4 — Checkout live | Complete |
 | LEG-05 | Phase 2 — Legal floor | Complete |
 | LEG-06 | Phase 2 — Legal floor | Complete |
-| POST-01 | Phase 5 — Post-purchase handoff | Pending |
+| POST-01 | Phase 5 — Post-purchase handoff | Complete |
 | POST-02 | Phase 3 — Copy lock | Complete |
-| POST-03 | Phase 5 — Post-purchase handoff | Pending |
+| POST-03 | Phase 5 — Post-purchase handoff | Complete |
 | ANLY-01 | Phase 6 — Measurement | Pending |
 | ANLY-02 | Phase 6 — Measurement | Pending |
 | INFR-01 | Phase 1 — Production floor | Complete |
