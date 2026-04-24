@@ -10,12 +10,26 @@ that blocks adult content and dating apps across a household's devices.
 ship by uploading the four files to any static host (Netlify/Vercel/Cloudflare
 Pages/GitHub Pages).
 
+**One exception to the static-only rule:** `middleware.js` at repo root is a
+Vercel Edge Middleware module that guards `/success` — it calls Stripe's REST
+API with `STRIPE_SECRET_KEY` to verify the post-purchase session before any
+HTML is served. Still no build step, still no npm dependencies (uses the
+Edge runtime's built-in `fetch`). If you ever move hosts off Vercel, the gate
+moves with you: port the same logic to that host's edge-function equivalent
+or fall back to a client-side check. See `DEPLOY.md` §8 for env var setup.
+
 ## Files
 
 - `index.html` — landing page (hero, how it works, benefits, emotional, pricing, footer)
-- `success.html` — post-purchase setup guide (hero, steps, device instructions)
+- `success.html` — post-purchase setup guide (hero, steps, device instructions); gated by `middleware.js`
+- `privacy.html`, `terms.html` — Bulgarian GDPR/ЗЗП legal pages (drafts, `noindex` until lawyer review)
 - `styles.css` — design tokens + all component styles
 - `script.js` — smooth anchor scroll, sticky-nav shadow, reveal-on-scroll
+- `middleware.js` — Vercel Edge Middleware that verifies Stripe Checkout sessions before `/success` is served
+- `vercel.json` — security headers + cleanUrls
+- `favicon.svg`, `og-image.svg`, `robots.txt`, `sitemap.xml` — SEO + branding assets
+- `DEPLOY.md` — Vercel + Hostinger + env-var handoff
+- `.env.example` — required environment variables (copy to `.env` locally if needed)
 - `README.md` — user-facing repo notes
 - `CLAUDE.md` — this file
 

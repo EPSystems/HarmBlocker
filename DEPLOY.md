@@ -100,7 +100,52 @@ python -m http.server 8080
 
 Local preview serves over plain HTTP — this is expected and does not trigger the HSTS/mixed-content checks (those apply only to the production origin).
 
-## 8. What is NOT set up here
+## 8. Environment variables (required for `/success` gate)
+
+`middleware.js` at the repo root verifies Stripe Checkout sessions before
+serving `success.html`. It requires one secret:
+
+| Variable | Source | Where to set |
+|----------|--------|--------------|
+| `STRIPE_SECRET_KEY` | Stripe dashboard → Developers → API keys → **Secret key** (`sk_live_...` or `sk_test_...`) | Vercel → Project → Settings → Environment Variables — add for **Production** AND **Preview** |
+
+Steps:
+
+1. In Stripe dashboard, reveal and copy your secret key.
+   - Use `sk_test_...` for Preview deployments.
+   - Use `sk_live_...` for Production.
+2. In Vercel → Project → Settings → Environment Variables:
+   - Key: `STRIPE_SECRET_KEY`
+   - Value: the key from step 1
+   - Environment: check **Production** and **Preview** (skip Development unless you test the middleware locally)
+   - Click **Save**.
+3. Redeploy (Settings → Deployments → ⋯ → Redeploy) so the middleware picks up the env var.
+
+**If `STRIPE_SECRET_KEY` is missing or invalid, the middleware fails closed** —
+every `/success` visit redirects to `/#pricing`. This is intentional: it is
+safer to break the post-purchase page than to leak it.
+
+### Local development
+
+The middleware only runs on Vercel's Edge runtime, not under `python -m
+http.server`. Local preview will serve `success.html` directly without
+verification — this is expected. Test the gate against a Vercel Preview
+deployment, not localhost.
+
+Optionally: copy `.env.example` → `.env` and paste your test key if you run
+`vercel dev` locally (which *does* execute middleware). `.env` is
+gitignored.
+
+## 9. Verify the `/success` gate after deploy
+
+Post-deploy checks:
+
+1. **Direct hit without session_id**: visit `https://harmblocker.bg/success` → should 302 to `/#pricing`.
+2. **Forged session_id**: visit `https://harmblocker.bg/success?session_id=cs_test_fake` → should 302 to `/#pricing`.
+3. **Real purchase path**: complete a real Stripe test-mode checkout → Stripe redirects to `/success?session_id={CHECKOUT_SESSION_ID}` → page loads normally.
+4. **Post-cancellation**: after a real successful purchase, refreshing `/success?session_id=...` continues to work (the session stays `complete` regardless of later subscription cancellation).
+
+## 10. What is NOT set up here
 
 Explicit out-of-scope for Phase 1:
 
@@ -110,8 +155,10 @@ Explicit out-of-scope for Phase 1:
 - Preview deployment URL protection, password auth, team members — default Vercel behavior is fine.
 - Any kind of CI / tests — no tests exist yet.
 
-## 9. If something breaks
+## 11. If something breaks
 
 - Domain stuck on "Invalid Configuration" in Vercel: DNS hasn't propagated, or the record points to the wrong target. Re-check Hostinger values against what Vercel shows.
 - Site loads but no HSTS header: deploy hasn't picked up `vercel.json`. Trigger a redeploy from the Vercel dashboard.
 - Push to main didn't trigger a deploy: Vercel project is not linked to the Git repo — re-link from Settings → Git.
+- `/success` always redirects even with a valid Stripe session: `STRIPE_SECRET_KEY` is missing, wrong, or scoped to Test while the session was created with Live (or vice versa). Check Vercel → Project → Settings → Environment Variables. Redeploy after fixing.
+- `middleware.js` changes don't seem to take effect: middleware is only picked up at deploy time; push a commit and let Vercel redeploy.
